@@ -1,17 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
+
+<!-- Bootstrap 5 Bart Simpson template designed for INFO1005 Website Design - 2025 -->
+<!-- Date: September 2025  -->
+<!-- Author: Website Design Team -->
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Christian Georgis — Resume</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  
+
+<!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Other meta tags -->
+    <meta name="description" content="Christian Georgis Resume Website">
+    <meta name="author" content="Christian Georgis">
+
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Christian Georgis — Resume</title>
 
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<!-- Landing page background for template compatibility -->
+<div class="bg-image"></div>
+
+<!-- Navbar - Start -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Christian Georgis</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
@@ -22,17 +49,16 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
-        <!-- Updated Download Resume Button -->
-        <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary ms-2" href="resume.pdf" download>Download Resume</a>
-        </li>
+        <li class="nav-item"><a class="nav-link btn btn-sm btn-outline-primary ms-2" href="resume.pdf" download>Download Resume</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- Navbar - End -->
 
+<!-- Hero Section (Your design) -->
 <header class="py-5 hero-spotlight">
-  <div class="container d-md-flex align-items-center">
+  <div class="container d-md-flex align-items-center hero-content">
     <img src="assets/images/hero.jpg" alt="profile" class="me-md-4 profile-pic" width="140" height="140">
     <div>
       <h1 class="display-6 mb-1">Christian Georgis</h1>
@@ -43,6 +69,11 @@
     </div>
   </div>
 </header>
+
+<!-- Landing Content for template (kept for teacher compatibility, optional) -->
+<div class="landing-content" style="display:none;">
+    <h1 class="intro typewrite" data-period="2000" data-type='["The Creative?", "The Web Designer?", "The Animator?"]'></h1>
+</div>
 
 <main class="container my-5">
   <section class="mb-5">
@@ -73,7 +104,18 @@
   </div>
 </footer>
 
+<!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+<!-- Typewriter effect script (from teacher template) -->
+<script>
+var TxtType=function(el,toRotate,period){this.toRotate=toRotate;this.el=el;this.loopNum=0;this.period=parseInt(period,10)||2000;this.txt='';this.tick();this.isDeleting=false;};
+TxtType.prototype.tick=function(){var i=this.loopNum%this.toRotate.length;var fullTxt=this.toRotate[i];if(this.isDeleting){this.txt=fullTxt.substring(0,this.txt.length-1);}else{this.txt=fullTxt.substring(0,this.txt.length+1);}this.el.innerHTML='<span class="wrap">'+this.txt+'</span>';var that=this;var delta=200-Math.random()*100;if(this.isDeleting){delta/=2;}if(!this.isDeleting&&this.txt===fullTxt){delta=this.period;this.isDeleting=true;}else if(this.isDeleting&&this.txt===''){this.isDeleting=false;this.loopNum++;delta=500;}setTimeout(function(){that.tick();},delta);};
+window.onload=function(){var elements=document.getElementsByClassName('typewrite');for(var i=0;i<elements.length;i++){var toRotate=elements[i].getAttribute('data-type');var period=elements[i].getAttribute('data-period');if(toRotate){new TxtType(elements[i],JSON.parse(toRotate),period);}}var css=document.createElement("style");css.type="text/css";css.innerHTML=".typewrite>.wrap{border-right:0.08em solid #fff}";document.body.appendChild(css);};
+</script>
+
+<!-- Bootstrap 5 Bart Simpson template designed for INFO1005 Website Design - 2025 -->
+
 </body>
 </html>
